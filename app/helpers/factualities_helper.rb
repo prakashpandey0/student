@@ -1,0 +1,2 @@
+module FactualitiesHelper
+end

@@ -1,0 +1,27 @@
+<%= form_for(factuality) do |f| %>
+  <% if factuality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(factuality.errors.count, "error") %> prohibited this factuality from being saved:</h2>
+
+      <ul>
+      <% factuality.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :teachers_name %>
+    <%= f.text_field :teachers_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mobile_no %>
+    <%= f.number_field :mobile_no %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

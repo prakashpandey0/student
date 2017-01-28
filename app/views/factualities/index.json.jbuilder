@@ -1,0 +1,1 @@
+json.array! @factualities, partial: 'factualities/factuality', as: :factuality
