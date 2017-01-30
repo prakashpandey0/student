@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'pages/myschedule'
 
   get  '/signup',  to: 'users#new'
+  post  '/signup',  to: 'users#create'
 
   resources :factualities
   resources :students
