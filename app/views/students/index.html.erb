@@ -13,11 +13,11 @@
   </thead>
 
   <tbody>
-    <% @students.each do |student| %>
+    <% @student.each do |students| %>
       <tr>
-        <td><%= student.name %></td>
-        <td><%= student.class %></td>
-        <td><%= student.contact_no %></td>
+        <td><%= students.name %></td>
+        
+        <td><%= students.contact_no %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
