@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
      redirect_back_or user
   	 #remember(user)#coming from helper.sessions_helper.rb
-     redirect_to(user)
+     #redirect_to(user)
   	else
   		flash.now[:danger] = 'Invalid email/password combination'
   		render 'new'

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course name:</strong>
+  <%= @my_schedule.course_name %>
+</p>
+
+<p>
+  <strong>Subjects:</strong>
+  <%= @my_schedule.subjects %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @my_schedule.start_time %>
+</p>
+
+
+
+<p>
+  <strong>Duration:</strong>
+  <%= @my_schedule.duration %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @my_schedule.date %>
+</p>
+
+<%= link_to 'Edit', edit_my_schedule_path(@my_schedule) %> |
+<%= link_to 'Back', my_schedules_path %>

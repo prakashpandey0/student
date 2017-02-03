@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   
 
+  resources :my_schedules
   get 'users/new'
   get  '/signup',  to: 'users#new'
   post  '/signup',  to: 'users#create'
 
   get 'students/new'
   get '/students', to: 'students#index'
-  get '/students', to: 'students#new'
-  post '/students', to: 'students#create'
+  #get '/students', to: 'students#new'
+  #post '/students', to: 'students#create'
 
   get 'pages/dashboard'
   get '/dashboard', to:'pages#dashboard'
@@ -16,8 +17,14 @@ Rails.application.routes.draw do
   #get 'pages/student'
   #get '/student', to: 'pages#student'
 
-  get 'pages/factulities'
-  get 'pages/myschedule'
+  #get 'pages/factulities'
+  get 'factualities/new'
+  get '/factualities', to: 'factualities#index'
+
+
+  #get 'pages/myschedule'
+  get 'my_schedules/new'
+  get '/my_schedules', to: 'my_schedules#index'
 
   
   get 'sessions/new'

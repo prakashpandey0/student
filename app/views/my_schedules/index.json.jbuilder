@@ -1,0 +1,1 @@
+json.array! @my_schedules, partial: 'my_schedules/my_schedule', as: :my_schedule
