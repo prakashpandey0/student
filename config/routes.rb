@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   
 
+  resources :events
   resources :my_schedules
   get 'users/new'
   get  '/signup',  to: 'users#new'
   post  '/signup',  to: 'users#create'
+
+  get 'events/new'
+  get '/events', to: 'events#new'
 
   get 'students/new'
   get '/students', to: 'students#index'

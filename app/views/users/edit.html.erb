@@ -18,6 +18,10 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+      <%= f.label :UploadImage %><br>
+        <%= f.file_field :image,class: 'form-control' %>
+        
+
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 

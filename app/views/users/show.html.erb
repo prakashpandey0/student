@@ -4,7 +4,11 @@
 	<title></title>
 </head>
 <body>
+<p><h3>profile picture</h3><%= image_tag(@user.image ,:size => "260x180", :crop => :fill , :style => "border: 1px solid red")%></p>
 <p><h3>Username</h3><%= @user.name%></p> 
 <p><h3>Phone Number</h3><%= @user.phone_no%></p>
+
+
+
 </body>
 </html>

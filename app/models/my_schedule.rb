@@ -1,2 +1,3 @@
 class MySchedule < ApplicationRecord
+	
 end

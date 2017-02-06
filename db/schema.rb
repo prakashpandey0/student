@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170203054858) do
+ActiveRecord::Schema.define(version: 20170206133705) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "event_tiltle"
+    t.string   "event_type"
+    t.string   "select_class"
+    t.time     "select_day"
+    t.time     "end_date"
+    t.time     "event_duration"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "factualities", force: :cascade do |t|
     t.string   "teachers_name"
@@ -31,10 +42,10 @@ ActiveRecord::Schema.define(version: 20170203054858) do
 
   create_table "students", force: :cascade do |t|
     t.string   "name"
-    t.string   "class"
+    t.string   "student_class_name"
     t.integer  "contact_no"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,6 +56,7 @@ ActiveRecord::Schema.define(version: 20170203054858) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.string   "image"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
