@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170206133705) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: :cascade do |t|
     t.string   "event_tiltle"
     t.string   "event_type"
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 20170206133705) do
     t.string   "password_digest"
     t.string   "remember_digest"
     t.string   "image"
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
 end
