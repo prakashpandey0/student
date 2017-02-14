@@ -2,6 +2,11 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update] #only logged in user will upadte there profile
   before_action :correct_user,   only: [:edit, :update] #only logged user can upadte their perofile 
 
+  def index
+    @user = User.all
+
+  end
+  
   def new
   	@user = User.new
   end
@@ -13,7 +18,10 @@ class UsersController < ApplicationController
 
   def create 
    @user  = User.new(user_params)
+   #used for email
+    
    if @user.save
+       UserMailer.registration_confirmation(@user).deliver
    	   flash[:success] = "Welcome to ARMY!"
       redirect_to @user #or redirect_to user_url(@user)
      else
