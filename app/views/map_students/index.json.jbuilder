@@ -1,0 +1,1 @@
+json.array! @map_students, partial: 'map_students/map_student', as: :map_student

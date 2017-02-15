@@ -1,0 +1,7 @@
+class MapStudent < ApplicationRecord
+	def self.import(file)
+	CSV.foreach(file.path, headers: true) do |row|
+		MapStudent.create! row.to_hash
+	end
+end
+end

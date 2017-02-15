@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Map Students</h1>
+
+<h3>Import Student</h3>
+<%= form_tag import_map_students_path, multipart: true do%>
+<%= file_field_tag :file%>
+<button ><%= submit_tag "Upload Students" %></button>
+<% end%><br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Enroll no</th>
+      <th>Name</th>
+      <th>Phone no</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @map_students.each do |map_student| %>
+      <tr>
+        <td><%= map_student.enroll_no %></td>
+        <td><%= map_student.name %></td>
+        <td><%= map_student.phone_no %></td>
+        <td><%= map_student.password %></td>
+        <td><%= link_to 'Show', map_student %></td>
+        <td><%= link_to 'Edit', edit_map_student_path(map_student) %></td>
+        <td><%= link_to 'Destroy', map_student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  
+
+
+<br>
+
+

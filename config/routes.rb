@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
-
+  #get '/map_students'
+  #get 'map_students', to: 'map_students#new'
+  resources :map_students do
+    collection {post :import}
+  end
   resources :events
   resources :my_schedules
   get 'users/new'
@@ -36,8 +40,10 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  
+
   resources :factualities
-  resources :students
+  resources :students 
   resources :users
   	
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,0 +1,1 @@
+json.partial! "map_students/map_student", map_student: @map_student

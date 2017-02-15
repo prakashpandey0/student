@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Enroll no:</strong>
+  <%= @map_student.enroll_no %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @map_student.name %>
+</p>
+
+<p>
+  <strong>Phone no:</strong>
+  <%= @map_student.phone_no %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @map_student.password %>
+</p>
+
+<%= link_to 'Edit', edit_map_student_path(@map_student) %> |
+<%= link_to 'Back', map_students_path %>
