@@ -21,7 +21,7 @@ class UsersController < ApplicationController
    #used for email
     
    if @user.save
-       UserMailer.registration_confirmation(@user).deliver
+       UserMailer.registration_confirmation(@user).deliver #used for mail sending
    	   flash[:success] = "Welcome to ARMY!"
       redirect_to @user #or redirect_to user_url(@user)
      else

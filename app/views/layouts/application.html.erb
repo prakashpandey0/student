@@ -4,8 +4,21 @@
     <title><%= yield(:title)%></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
+    <%= stylesheet_link_tag    "styles", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href="/../app/assets/stylesheets/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <title>Student Management</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    
+    <link type="text/css" rel="stylesheet" href="/../app/assets/stylesheets/materialize/css/materialize.min.css"  media="screen"/>
+    <!--vector map css-->
+    <link href="/../app/assets/stylesheets/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
+    <link href="/../app/assets/stylesheets/style.css" rel="stylesheet">
      
   </head>
 
@@ -15,7 +28,26 @@
      <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
-    	<%= yield %>
+    	
      </div>
+     <%= yield %>
+     <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="/../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/../plugins/materialize/js/materialize.min.js"></script>
+
+  <script type="text/javascript" src="/../app/assets/javascripts/app.js"></script>
+  <!-- Morris -->
+  <script src="/../plugins/morris/raphael-2.1.0.min.js"></script>
+  <script src="/../plugins/morris/morris.js"></script>
+  <!-- FLOT CHART-->
+  <script src="/../plugins/flot/jquery.flot.js"></script>
+  <script src="/../plugins/flot/jquery.flot.tooltip.min.js"></script>
+  <script src="/../plugins/flot/jquery.flot.resize.js"></script>
+  <script src="/../plugins/flot/jquery.flot.pie.js"></script>
+  <script src="/../plugins/flot/jquery.flot.time.js"></script>
+  <script src="/../plugins/flot/jquery.flot.categories.js"></script>
+  <script src="/../plugins/flot/jquery.flot.spline.min.js"></script>
+  <script src="/../app/assets/javascripts/dashboard-1.js"></script>
+  </body>
   </body>
 </html>
