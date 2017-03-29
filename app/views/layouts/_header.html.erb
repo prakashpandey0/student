@@ -3,8 +3,8 @@
     <nav class="teal">
       <div class="nav-wrapper">
         <ul class="left">
-          <!--<a href="index.html" class="brand-logo">Student</a>-->
-          <li><h1 class="logo-wrapper center-align"> <%= link_to 'Student', root_url , class: "brand-log"%></h1></li>
+          <a href="index.html" class="brand-logo">Student</a>
+          <!-- <li><h1 class="logo-wrapper center-align"> <%= link_to 'Student', root_url , class: "brand-log"%></h1></li> -->
         </ul>
 
         <ul class="right col s9 m3 nav-right-menu">
@@ -38,13 +38,14 @@
                   <li><%= link_to "Log in", login_path %></li>
           <%  end  %>
         </ul>
-        <!-- <ul id='dropdown1' class='dropdown-content notifications-dropdown'>
+        <ul id='dropdown1' class='dropdown-content notifications-dropdown'>
           <li class="notification-header">
             4 New Messages
           </li>
           <li>
             <a href="#">
-              <img src="/../app/assets/images/avatar-01.png" alt="" width="40" class="left">
+              <!-- <img src="/../app/assets/images/avatar-01.png" alt="" width="40" class="left"> -->
+              <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
               <div class="notify-content">
                 <span class="notify-title">John Started Following You</span>
                 <p>
@@ -55,7 +56,8 @@
           </li>
           <li>
             <a href="#">
-              <img src="/../app/assets/images/avatar-04.png" alt="" width="40" class="left">
+              <!-- <img src="/../app/assets/images/avatar-04.png" alt="" width="40" class="left"> -->
+              <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
               <div class="notify-content">
                 <span class="notify-title">Adam sent you a request</span>
                 <p>
@@ -66,7 +68,8 @@
           </li>
           <li>
             <a href="#">
-              <img src="/../app/assets/images/avatar-05.png" alt="" width="40" class="left">
+              <!-- <img src="/../app/assets/images/avatar-05.png" alt="" width="40" class="left"> -->
+              <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
               <div class="notify-content">
                 <span class="notify-title">Deny Sent a private Message</span>
                 <p>
@@ -77,7 +80,8 @@
           </li>
           <li>
             <a href="#">
-              <img src="/../app/assets/images/avatar-08.png" alt="" width="40" class="left">
+              <!-- <img src="/../app/assets/images/avatar-08.png" alt="" width="40" class="left"> -->
+              <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
               <div class="notify-content">
                 <span class="notify-title">Kalia assign a task</span>
                 <p>
@@ -117,7 +121,7 @@
             </a>
           </li>
           <li>
-            <!-- <a href="#">
+            <a href="#">
               <i class="material-icons red-text left">email</i>
               <div class="notify-content">
                 <span class="notify-title red-text">Email Send Failed</span>
@@ -125,19 +129,19 @@
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 </p>
               </div>
-            </a> -->
+            </a>
 
-          <!-- <li>
+          <li>
             <a href="#" class="center-align">View All</a>
-          </li> -->
-        </ul> -->
+          </li>
+        </ul>
 
-        <!-- <form class="right search col s6 hide-on-med-and-down">
+        <form class="right search col s6 hide-on-med-and-down">
           <div class="input-field">
             <input id="search" type="search" placeholder="Search" autocomplete="off">
             <label for="search" class="active"><i class="material-icons search-icon">search</i></label>
           </div>
-        </form> -->
+        </form>
       </div>
     </nav>
 
@@ -162,18 +166,7 @@
       <li class="no-padding"><%= link_to "Home",   root_path, class:"waves-effect waves-grey" %></li>
       <li class="no-padding"><%= link_to "Help",   '#', class:"waves-effect waves-grey" %></li>
       <li class="no-padding">
-        <!--<a class="collapsible-header waves-effect waves-grey"><i class="material-icons">pie_chart</i>Charts</a>-->
-        <!--<div class="collapsible-body">-->
-          <!--<ul>-->
-            <!--<li><a href="/../app/views/pages/chart-flot.html">Flot Chart</a></li>-->
-            <!--<li><a href="/../app/views/pages/chart-morris.html">Morris Chart</a></li>-->
-            <!--<li><a href="/../app/views/pages/chart-chartjs.html">ChartJs</a></li>-->
-            <!--<li><a href="/../app/views/pages/chart-sparkline.html">Sparkline</a></li>-->
-            <!--<li><a href="/../app/views/pages/chart-c3.html">c3 Charts</a></li>-->
-
-
-          <!--</ul>-->
-        <!--</div>-->
+        
 
         <%if logged_in? %>
 
@@ -256,9 +249,10 @@
           <ul>
             <li><a href="page-404.html">404 Page</a></li>
 
-
-            <li><a href="page-login.html">Login</a></li>
-            <li><a href="page-register.html">Register</a></li>
+            <li><%= link_to "Log in", login_path %></li>
+            <li><%= link_to "Sign up", signup_path%></li>
+            <!-- <li><a href="page-login.html">Login</a></li> -->
+            <!-- <li><a href="page-register.html">Register</a></li> -->
             <li><a href="page-lock-screen.html">Lock Screen</a></li>
             <li><a href="page-forgot-password.html">Forgot Password</a></li>
             <li><a href="page-pricing.html">Pricing Tables</a></li>
@@ -293,7 +287,8 @@
     <ul class="chat-list">
       <li class="chat-item clearfix">
         <a href="#">
-          <img src="/../app/assets/images/avatar-01.png" alt="" width="40" class="left">
+          <!-- <img src="/../app/assets/images/avatar-01.png" alt="" width="40" class="left"> -->
+          <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
           <div class="overflow-hidden">
             <h5>John Doe</h5>
             <span class="green-text">Online</span>
@@ -302,7 +297,8 @@
       </li><!--end chat item-->
       <li class="chat-item clearfix">
         <a href="#">
-          <img src="/../app/assets/images/avatar-02.png" alt="" width="40" class="left">
+          <!-- <img src="/../app/assets/images/avatar-02.png" alt="" width="40" class="left"> -->
+          <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
           <div class="overflow-hidden">
             <h5>David villa</h5>
             <span class="red-text">Offline</span>
@@ -311,7 +307,8 @@
       </li><!--end chat item-->
       <li class="chat-item clearfix">
         <a href="#">
-          <img src="/../app/assets/images/avatar-03.png" alt="" width="40" class="left">
+          <!-- <img src="/../app/assets/images/avatar-03.png" alt="" width="40" class="left"> -->
+          <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
           <div class="overflow-hidden">
             <h5>John Abraham</h5>
             <span class="grey-text">Active 3h ago</span>
@@ -320,7 +317,8 @@
       </li><!--end chat item-->
       <li class="chat-item clearfix">
         <a href="#">
-          <img src="/../app/assets/images/avatar-04.png" alt="" width="40" class="left">
+          <!-- <img src="/../app/assets/images/avatar-04.png" alt="" width="40" class="left"> -->
+          <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
           <div class="overflow-hidden">
             <h5>Johnny Liver</h5>
             <span class="green-text">Online</span>
@@ -329,7 +327,8 @@
       </li><!--end chat item-->
       <li class="chat-item clearfix">
         <a href="#">
-          <img src="/../app/assets/images/avatar-05.png" alt="" width="40" class="left">
+          <!-- <img src="/../app/assets/images/avatar-05.png" alt="" width="40" class="left"> -->
+          <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
           <div class="overflow-hidden">
             <h5>Mark Wough</h5>
             <span class="green-text">Online</span>
@@ -338,7 +337,8 @@
       </li><!--end chat item-->
       <li class="chat-item clearfix">
         <a href="#">
-          <img src="/../app/assets/images/avatar-06.png" alt="" width="40" class="left">
+          <!-- <img src="/../app/assets/images/avatar-06.png" alt="" width="40" class="left"> -->
+          <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
           <div class="overflow-hidden">
             <h5>Adam Smith</h5>
             <span class="red-text">Offline</span>
@@ -347,7 +347,8 @@
       </li><!--end chat item-->
       <li class="chat-item clearfix">
         <a href="#">
-          <img src="/../app/assets/images/avatar-07.png" alt="" width="40" class="left">
+         <!--  <img src="/../app/assets/images/avatar-07.png" alt="" width="40" class="left"> -->
+         <%= image_tag "avatar-01.png" ,width: 40, class: 'left'%>
           <div class="overflow-hidden">
             <h5>Rakesh sharma</h5>
             <span class="grey-text">Active 3h ago</span>

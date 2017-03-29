@@ -1,0 +1,25 @@
+/*
+Data table customize
+*/
+
+table.dataTable thead th, table.dataTable thead td,table.dataTable.no-footer{
+    border-bottom: 0px;
+}
+.dataTables_length select{
+    height: 2rem;
+    display: block;
+}
+.dataTables_filter input {
+    width: 250px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+    background-image: none;
+    border: 0px;
+    background-color: #009688;
+    color: #fff!important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+     background-image: none;
+    border-color: #009688;
+    background-color: #009688;
+}

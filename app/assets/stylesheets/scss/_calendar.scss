@@ -1,0 +1,67 @@
+/*
+Calendar
+*/
+#external-events h4 {
+  font-weight: 400;
+  font-size: 14px;
+}
+#external-events .fc-event {
+  background: #009688;
+  padding: 7px 10px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  margin-bottom: 10px;
+}
+
+.fc-button {
+  color: inherit;
+  border: 1px solid  #eee;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.9em;
+  line-height: 1.9em;
+  overflow: hidden;
+  padding: 0 0.6em;
+  position: relative;
+  white-space: nowrap;
+  &:focus{
+     background: #009688;
+     color:#fff;
+  }
+}
+
+.fc-state-default {
+  background-color: #ffffff;
+  background-image: none;
+  background-repeat: repeat-x;
+  box-shadow: none;
+  color: inherit;
+  text-shadow: none;
+}
+
+.fc-state-active {
+  background-color: #009688;
+  border-color: #009688;
+  color: #ffffff;
+}
+
+.fc-center h2 {
+  font-weight: 300;
+}
+
+.fc-widget-header .fc-day-header {
+  padding: 12px 0;
+  background: #f5f5f5;
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+  text-align: center;
+}
+
+.fc-event, .fc-agenda .fc-event-time, .fc-event a {
+  padding: 4px 6px;
+  background-color: #009688;
+  border-color: #009688;
+}

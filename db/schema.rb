@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170215155159) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "events", force: :cascade do |t|
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "event_tiltle"
     t.string   "event_type"
     t.string   "select_class"
@@ -26,14 +23,14 @@ ActiveRecord::Schema.define(version: 20170215155159) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "factualities", force: :cascade do |t|
+  create_table "factualities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "teachers_name"
     t.integer  "mobile_no"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
-  create_table "map_students", force: :cascade do |t|
+  create_table "map_students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "enroll_no"
     t.string   "name"
     t.integer  "phone_no"
@@ -42,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170215155159) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "my_schedules", force: :cascade do |t|
+  create_table "my_schedules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "course_name"
     t.string   "subjects"
     t.string   "start_time"
@@ -52,7 +49,7 @@ ActiveRecord::Schema.define(version: 20170215155159) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "students", force: :cascade do |t|
+  create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "student_class_name"
     t.integer  "contact_no"
@@ -60,7 +57,7 @@ ActiveRecord::Schema.define(version: 20170215155159) do
     t.datetime "updated_at",         null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
     t.integer  "phone_no"

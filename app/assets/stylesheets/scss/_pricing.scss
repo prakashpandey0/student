@@ -1,0 +1,34 @@
+/*
+Pricing Tables
+*/
+
+.price-header{
+    margin-bottom: 30px;
+}.price-value{
+    font-size:90px;
+    line-height:90px;
+    position:relative;
+    display:inline-block;
+    sup,sub{
+        font-size: 12px;
+        display: inline-block;
+        position: absolute;
+    }
+    sup{
+       left:0;
+       top:5px;
+    }
+    sub{
+        right: -10px;
+        bottom:0;
+    }
+}
+.price-features{
+    li{
+        display: block;
+        padding: 10px 15px;
+        &:nth-child(even){
+            background: #eee;
+        }
+    }
+}

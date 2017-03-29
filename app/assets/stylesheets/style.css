@@ -20,13 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
-#session_remember_me {
-    width: auto;
-    margin-left: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0 !important;
 }
@@ -112,7 +105,7 @@ h6 {
   margin: 0 !important;
 }
 
-margin-t-0 {
+.margin-t-0 {
   margin-top: 0 !important;
 }
 
@@ -1150,4 +1143,9 @@ Template responsive css
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+
+.teal{
+    top: 0px;
+    right: 0px;
 }

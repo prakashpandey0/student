@@ -13,24 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require app
-//= require cable
-//= require draggable-custom
-//= require dropzone-custom
-//= require widget
-//= require nestable-custom
-//= require jquery.gmaps
-//= require morris.custom
-//= require sparkline.custom
-//= require sweet-alert-custom
-//= require tree-view-custom
-//= require input-mask-custom
-//= require ion-slider-custom
-//= require jvectormap.custom
-//= require dashboard-1
-//= require dashboard-2
-//= require chartJs.custom
-//= require chart-flot-custom
-//= require chart-c3.custom
-//= require calendar.custom
-//= require cable
+//= require bootstrap
+//here we are  requiring a folder plugin so we use require_tree
+//= require_tree ./plugins
+
+
+$(window).load(function () {
+    $('#preloader').fadeOut('slow', function () {
+        $(this).remove();
+    });
+});

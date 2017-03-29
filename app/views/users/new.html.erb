@@ -1,34 +1,71 @@
 
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: signup_path, html: { multipart: true }) do |f| %>
-    <%= render 'shared/error_messages' %>
-      
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control'%>
+<div class="display-table">
+            <div class="vertical-middle">
+                <div class="container">
+                    <div class="row margin-b-0">
+                        <div class="col s12 l4 offset-l4">
+                            <div class="card margin-b-0">
+                                <div class="card-content">
+                                    <span class="card-title center-align">Sign Up For free</span>
+                                    <div class="row">
+                                           <!-- <form class="col s12 margin-b-0"> -->
+                                           <%= form_for(@user, class: "col s12 margin-b-0", url: signup_path, html: { multipart: true }) do |f| %>
+                                                <div class="input-field col s12">
+                                                   <!-- <input id="name" type="email" class="validate">
+                                                   <label for="name" class="">Name</label> -->
+                                                   <%= f.label :name, class: "" %>
+                                                   <%= f.text_field :name, class: 'validate'%>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+                                               </div>
+                                               <div class="input-field col s12">
+                                                   <!-- <input id="email" type="email" class="validate">
+                                                   <label for="email" class="">Email</label> -->
+                                                   <%= f.label :email, class: "" %>
+                                                   <%= f.email_field :email, class: 'validate' %>
 
-      <%= f.label :phone_no %>
-      <%= f.number_field :phone_no, class: 'form-control' %>
+                                               </div>
+                                               <div class="input-field col s12">
+                                                   <!-- <input id="password" type="password" class="validate">
+                                                   <label for="password">Password</label> -->
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      
-        <%= f.label :UploadImage %><br>
-        <%= f.file_field :image %>
-        
-  
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
+                                                   <%= f.label :phone_no,class: "" %>
+                                                   <%= f.number_field :phone_no, class: 'validate' %>
+                                               </div>
+                                               <div class="input-field col s12">
+                                                 <%= f.label :password,class: "" %>
+                                                 <%= f.password_field :password, class: 'validate' %>
+                                               </div>
+                                               <div class="input-field col s12 margin-b-20">
+                                                   <!-- <input id="cpassword" type="password" class="validate">
+                                                   <label for="cpassword">Confirm Password</label> -->
+                                                   <%= f.label :password_confirmation, "Confirmation",class: "" %>
+                                                    <%= f.password_field :password_confirmation, class: 'validate' %>
+                                               </div>
+                                               <div class="input-field col s12 margin-b-20">
+                                                   <!-- <input id="cpassword" type="password" class="validate">
+                                                   <label for="cpassword">Confirm Password</label> -->
+                                                   <%= f.label :UploadImage %><br>
+                                                   <%= f.file_field :image %>
+                                               </div>
+                                               <div class="col s12 right-align margin-b-20">
+                                                
+                                                   <!-- <button type="submit" class="waves-effect waves-light btn teal btn-block">sign in</button> -->
+                                                   <%= f.submit "Create my account", class: "waves-effect waves-light btn teal btn-block" %>
+                                                  <% end %>
+                                               </div>
+                                               <div class="col s12 center-align">
+                                                
+                                                   <!-- <a href="page-login.html">Already a member!</a> -->
+                                                   <%= link_to "Already a member!", login_path %>
+                                               </div>
+                                           <!-- </form> -->
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

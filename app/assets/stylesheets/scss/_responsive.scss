@@ -1,0 +1,23 @@
+/*
+Template responsive css
+*/
+@media(max-width:600px){
+    nav{
+        height: 64px;
+        line-height: 64px;
+    }
+    header .brand-logo{
+        width: auto;
+    }
+    nav .brand-logo {
+     left: 50px; 
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.page-content{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+}
+
+

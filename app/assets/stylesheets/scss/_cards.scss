@@ -1,0 +1,145 @@
+/*
+Card styles
+*/
+.card,.z-depth-1{
+         box-shadow: 0 2px 2px 0 rgba(0,0,0,0.04), 0 1px 5px 0 rgba(0,0,0,0.02), 0 3px 1px -2px rgba(0,0,0,0.01);   
+}
+.card{
+    margin-top:0px;
+    margin-bottom:20px;
+
+    .card-content{
+        .card-title{
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            text-transform: capitalize;
+            display: block;
+            margin-bottom:20px;
+            color:#333;
+            .subtitle{
+                font-size: 12px;
+                color: #aeaeae;
+                display: block;
+                font-weight: 400;
+                text-transform: capitalize;
+                >code.language-markup{
+                    text-transform: lowercase!important;
+                }
+            }
+        }
+    }
+    &.no-shadow{
+        box-shadow: none;
+        background-color: transparent;
+        .card-content{
+            padding: 0px;
+        }
+    }
+}
+.card-actions{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    padding: 20px;
+    >ul{
+        margin: 0px;
+        >li{
+            float:left;
+            display: block;
+            +li{
+                margin-left: 8px;
+            }
+        }
+        >li>a {
+            display:block;
+            i{
+                font-size: 18px;
+                color: #999;
+                &:hover{
+                    color:#000;
+                }
+            }
+        }
+    }
+}
+
+
+.card-dropdown{
+    width: 160px!important;
+    >li{
+        min-height: 100%;
+        >a{
+            padding: 6px 16px;
+            color: #999;
+            text-transform: capitalize;
+            font-size: 13px;
+        }
+    }
+}
+.card-panel{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.ui-sortable .sortable-title {
+  cursor: move;
+}
+
+.ui-sortable-placeholder {
+  border: 1px dashed #cecece !important;
+  visibility: visible !important;
+  background: #e7eaec;
+}
+
+.card.ui-sortable-placeholder {
+  margin: 0 0 23px !important;
+}
+.dd3-handle:before{
+    content: "\E5D2";
+    font-family: 'Material Icons';
+}
+.card-profile-image{
+    width: 60px;
+    border: 2px solid rgba(0,0,0,0.1);
+    position: relative;
+    margin-top: -60px;
+    z-index: 9;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+.profile-card{
+    span.card-title{
+        font-size: 20px!important;
+        display: block;
+        margin-top: 15px;
+    }
+    .card-content{
+        p{
+                font-size: 1rem;
+    margin: 5px 0 6px;
+    i{
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+        }
+    }
+}
+.profile-detail-button{
+    position: relative;
+    margin-top: -80px;
+}
+.profile-reveal{
+    z-index: 99!important;
+}
+.profile-reveal{
+         p{
+                font-size: 1rem;
+    margin: 10px 0 12px;
+    i{
+        vertical-align: middle;
+        margin-right: 10px;
+    } 
+    }
+}

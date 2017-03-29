@@ -1,0 +1,66 @@
+/*
+Charts style
+*/
+.legend>div{
+    width: auto!important;
+   
+}
+.legend  table{
+        width: auto!important;
+        top:0;
+        td,th{
+            padding: 0px 5px;
+        }
+    }
+.jqstooltip {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.flot-chart {
+    width: 100%;
+    height: 300px;
+    .flot-chart-content {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#flot-pie-chart .legend table{
+    width: 75px;
+    height: 36px;
+    td{
+        padding: 2px 5px!important;  
+    }
+}
+#multi-axes-line .legend>div{
+        position: absolute;
+    width: 138px!important;
+    height: 28px!important;
+    bottom: 34px!important;
+    left: 28px!important;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.85;
+}
+#multi-axes-line .legend table td{
+        padding: 2px 5px!important;
+}
+.chart-legend-horizontal{
+    margin-bottom: 10px;
+    color: #999;
+    >li{
+        display: inline-block;
+        padding: 0px 10px;
+    }
+    span{
+        display: inline-block;
+        width:12px;
+        height: 12px;
+        border-radius: 6px;
+        margin-right: 4px;
+    }
+}
+.flot-pie-label{
+    background: #f5f5f5;
+    padding:3px 6px;
+}
