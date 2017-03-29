@@ -4,40 +4,33 @@
       <div class="nav-wrapper">
         <ul class="left">
           <a href="index.html" class="brand-logo">Student</a>
-          <!-- <li><h1 class="logo-wrapper center-align"> <%= link_to 'Student', root_url , class: "brand-log"%></h1></li> -->
+          <!-- <li><<%= link_to 'Student', root_url , class: "brand-log"%></h1></li> -->
         </ul>
 
         <ul class="right col s9 m3 nav-right-menu">
           <li class="hide-on-med-and-down"><a href="javascript:void(0)" data-activates="dropdown2" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i><span class="badge red">3</span></a></li>
           <li class="hide-on-med-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">email</i><span class="badge blue">4</span></a></li>
-          <li><a class='dropdown-button  dropdown-right' href='#' data-activates='dropdown'><%= image_tag(image_path('avatar-05.png'), :width => "40") %></a> </li>
+          <li><a class='dropdown-button  dropdown-right' href='#' data-activates='dropdown'><%= image_tag(image_path('avatar-03.png'), :width => "40") %></a> </li>
           <li><a href="javascript:void(0)" data-activates="right-sidebar" class="right-sidebar-button waves-effect waves-light"><i class="material-icons">chat</i></a></li>
 
         </ul>
         <!-- Dropdown Structure -->
         <!---->
-        <ul class="nav navbar-nav navbar-right ">
-
-
-          <%if logged_in? %>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      Account <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><%= link_to "Profile", current_user %></li>
-                      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-
-                      <li class="divider"></li>
-                      <li>
-                        <%= link_to "Log out", logout_path, method: "delete" %>
-                      </li>
-                    </ul>
-                  </li>
+        <ul id='dropdown' class='dropdown-content profile-dropdown'>
+            <%if logged_in? %>
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Log out", logout_path, method: "delete" %>
+                </li>
+                    
+                  
           <% else %>
                   <li><%= link_to "Log in", login_path %></li>
           <%  end  %>
-        </ul>
+        </ul> 
+        
         <ul id='dropdown1' class='dropdown-content notifications-dropdown'>
           <li class="notification-header">
             4 New Messages
